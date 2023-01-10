@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.ico">
+    <title>About Us</title>
+
+    <!-- style {start} -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link href="cover.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        @import url('https://fonts.googleapis.com/css?family=Calistoga');
+        @import url('https://fonts.googleapis.com/css?family=Helvetica');
+        .header > h1{
+            color: white;
+            font-family: Calistoga;
+            font-size: 270px;
+            font-weight: 400;
+         }
+         .header > p{
+            color: white;
+            font-family: Helvetica;
+            font-weight: 600;
+            font-size: 20px;
+         }
+         .about-sys > h2{
+            font-family: Calistoga;
+            font-weight: 800;
+            font-size: 72px;
+            line-height:86.4px;
+
+         }
+         .about-sys > h3{
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 18px;
+            line-height:21.6px;
+            letter-spacing:1.8px;
+            text-transform:uppercase;
+         }
+         .about-sys > p{
+            padding-right: 15%;
+            padding-left: 15%;
+            font-family: Helvetica;
+            line-height:21px;
+            font-size: 18px;
+         }
+         .pic-sys > img{
+            align-self: center;
+            height: 380px;
+            width: 297px;
+            padding-left: 0%;
+         }
+         .about-sys > button{
+            cursor: none;
+         }
+         .pic-sys{
+            align-items: center;
+            align-content: center;
+         }
+         @media (max-width: 800px) {
+            .header > h1{
+                font-size: 90px;
+            }
+            .header > p{
+                font-size: 15px;
+            }
+            .pic-sys{
+                display: none;
+            }
+            .about-sys{
+                flex: 100%;
+            }
+            .about-sys > h2{
+                font-size: 50px;
+            }
+            .about-sys > p{
+                font-size: 15px;
+            }
+        }
+    </style>
+    <!-- style{end} -->
+
+    <!--script{start}-->
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/jquery.js"></script>
+    <!--script{end}-->
+
+</head>
+<body>
+<div class="d-flex h-100 text-center text-white bg-dark">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+          <div>
+            <h3 class="float-md-start mb-0">Uc Devs</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="jm.html">Join Me</a>
+              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link active" aria-current="page" href="about.html">About Me</a>
+              <a class="nav-link" href="/Project%20Cloud%20Gaming/index.html">Cloud Gaming</a>
+            </nav>
+        </header>
+    </div>
+</div>
+
+
+    <!--page{1}{start}-->
+    <div class="page1 res">
+        <header class="header">
+            <h1>Ayush</h1>
+            <p>Programmer: A machine that turns coffee into code.</p>
+        </header>
+    </div>
+    <div class="about">
+        <div class="ABOUT">
+            <div class="abt-main-div pic-sys">
+            </div>
+            <div class="abt-main-div about-sys">
+                <h2>About Me</h2><br>
+                <h3>Ayush Ghatkar</h3><br>
+                <p>I'm a full stack web developer. I mostly develop websites/web applications using Html, Css and using various JavaScript libraries and frameworks. I have a good knowledge of software development in general as well.</p>
+                <p>These days I'm learning more about software architectures and at the same time I try to learn more algorithms and detailed stuff. Many web developers don't pay attention to small algorithmic or architectural details but hopefully I'm not the one!</p><br>
+                <button class="btn btn-dark shadow-lg rounded">See More?</button><br>
+                <div class="wrapper">
+                    <div class="icon facebook">
+                        <div class="tooltip">FaceBook</div>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </div>
+                    <div class="icon twitter">
+                        <div class="tooltip">Twitter</div>
+                        <span><i class="fab fa-twitter"></i></span>
+                    </div>
+                    <div class="icon github">
+                        <div class="tooltip">Github</div>
+                        <span><i class="fab fa-github"></i></span>
+                    </div>
+                    <div class="icon instagram">
+                        <div class="tooltip">Instagram</div>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="abt-main-div pic-sys"></div>
+        </div>
+    </div>
+    <!--page{1}{end}-->
+    <!--page{2}{start}-->
+    <div class="res"></div>
+    <!--page{2}{stop}-->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <script>
+        var cursor = document.querySelector(".cursor");
+        var cursor2 = document.querySelector(".cursor2");
+        document.addEventListener("mousemove",function(e){
+            cursor.style.cssText = cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

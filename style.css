@@ -1,0 +1,218 @@
+*{
+    cursor:none;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Calistoga');
+@import url('https://fonts.googleapis.com/css?family=Helvetica');
+.header{
+  padding: 15%;
+	align-items: center;
+  background-image: url("Assets/Images/wallpaper.jpg"), linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.445));
+	background-size:cover;
+	background-position:center;	
+	text-align:center;
+	background-attachment:fixed;
+	height:100vh;
+	width: 100%;
+  opacity: 150%;
+  background-color: black;
+}
+.page2{
+  opacity: 50;
+	align-items: center;
+	background-size:cover;
+	text-align:center;
+	min-height:100vh;
+	width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.TypingIMGLeft{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("Assets/Images/Typing.jpg") no-repeat fixed center;
+  flex: 70%;
+  opacity: 50;
+  padding: 15%;
+	align-items: center;
+	background-size:cover;
+	text-align:center;
+	min-height:100vh;
+	width: 100%;
+}
+.JoinPage{
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    text-align: left;
+}
+.JN-form{
+    margin-top: 20%;
+}
+
+@media (max-width: 800px) {
+    .JoinPage {
+      flex: 100%;
+      padding: 20px;
+    }
+    .TypingIMGLeft {
+      display: none;
+    }
+    .header{
+      padding-top: 60%;
+    }
+  }
+.res{
+    background-repeat:no-repeat;
+    height:100vh;
+    justify-content: center;
+}
+.down{
+    height: 10vh;
+}
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: .1s;
+}
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #c6c6c6;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+hovert:hover ~ .cursor{
+	transform: translate(-50%, -50%) scale(1.5);
+	background-color: #c6c6c6;
+}
+hovert:hover ~ .cursor{
+	opacity: 0;
+}
+@media only screen and (max-width: 800px){
+    .cursor{
+        visibility: hidden;
+    }
+    .cursor2{
+        visibility: hidden;
+    }
+}
+.ABOUT{
+    align-self: center;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.pic-sys{
+    background: black;
+    flex: 25%;
+}
+.about-sys{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    background: white;
+    flex: 50%;
+    text-align: center;
+    background-repeat:no-repeat;
+    justify-content: center;
+}
+.wrapper{
+    display:inline-flex;
+    margin-top: 80px;
+  }
+  .wrapper .icon{
+    margin: 0 20px;
+    cursor:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position: relative;
+    z-index:2;
+  }
+  .wrapper .icon span{
+    position:relative;
+    z-index:2;
+    height: 60px;
+    width: 60px;
+    display:block;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    border-radius:50%;
+    text-align:center;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon span i{
+    font-size:25px;
+    line-height:60px;
+  }
+  .wrapper .icon .tooltip{
+    position:absolute;
+    top:0px;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    color:white;
+    opacity:0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon:hover .tooltip{
+    opacity:1;
+    pointer-events: auto;
+    top:-70px;
+  }
+  .wrapper .icon .tooltip:before{
+    position:absolute;
+    content:"";
+    height:15px;
+    width:15px;
+    bottom:-8px;
+    left:50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .wrapper .icon:hover span,
+  .wrapp .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+  }
+  .wrapper .icon:hover span{
+    color: #fff;
+  }
+  .wrapper .facebook:hover span,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip:before{
+    background:#3B5999;
+  }
+  .wrapper .twitter:hover span,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip:before{
+    background:#46C1F6;
+  }
+  .wrapper .github:hover span,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip:before{
+    background:#333;
+  }
+  .wrapper .instagram:hover span,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip:before{
+    background:#E1306C;
+  }
+  @media (max-width: 800px) {
+    .wrapper .icon{
+      margin: 0 9px;
+    }
+}
