@@ -4,9 +4,8 @@
 .header{
     padding: 15%;
     align-items: center;
-    background-image: url("wallpaper.jpg"), linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.445), no-repeat);
+    background-image: url("wallpaper.jpg"), linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.445));
     background-size:100%;
-    background-color: black;
     background-position:center;	
     text-align:center;
     align-content: center;
@@ -71,6 +70,8 @@
     .header{
         padding: 100px;
         background-size:200%;
+        background: none;
+        background-color: black;
       }
 }
 .btn{
@@ -127,9 +128,15 @@ body {
         height: 3px;
         background: #fefefe;
         margin: 6px 0;
-    } 
-}
-
-@media only screen and (max-width: 900px){
-    
+    }
+    .nav_styling{
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #11101b;
+        transition: 0.2s;
+    }
 }
