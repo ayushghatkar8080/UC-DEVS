@@ -1,3 +1,14 @@
+
+@import url('MASQUE.ttf');
+@import url('Headbears-z8xYa.otf');
+@font-face {
+    font-family: MASQUE;
+    src: url(MASQUE.ttf);
+}
+@font-face {
+    font-family: Headbears;
+    src: url(Headbears-z8xYa.otf);
+}
 *{
     cursor:none;
     box-sizing: border-box;
@@ -14,6 +25,9 @@
     height:100vh;
     width: 100%;
     opacity: 100;
+}
+.Headbears{
+    font-family: Headbears;
 }
 .res{
     background-repeat:no-repeat;
@@ -35,6 +49,12 @@
     height:100vh;
     overflow: hidden;
     background-color: #000;
+}
+.page2 h2{
+    text-align: center;
+    color: #fff;
+    font-family: Headbears;
+    font-size: 100px;
 }
 .cursor{
     position: fixed;
@@ -67,7 +87,8 @@
     display:grid;  
     place-items:center;
     align-self: center;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: MASQUE;
 }
 
 
@@ -231,6 +252,7 @@ body {
 }
 .page1 a{
     text-decoration: none;
+    font-family: Headbears;
     display: inline-block;
     color: white;
     font-size: 24px;
@@ -272,27 +294,10 @@ body {
     background-position: 250px 0px;
     color:black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* testing */
-
-
 .cyberbtn button, button::after {
     opacity: 100%;
-    width: 380px;
-    height: 86px;
+    width: 239px;
+    height: 85px;
     font-size: 36px;
     font-family: 'Bebas Neue', cursive;
     background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
@@ -376,3 +381,78 @@ body {
       transform: translate(0);
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* testing */
+
+.search-form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+.search-in{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+.search-form:hover,
+.search-form:valid{
+    width: 200px;
+    cursor: pointer;
+}
+
+.search-form:hover input,
+.search-form:valid input{
+    display: block;
+}
+
+.search-form:hover .fa,
+.search-form:valid .fa{
+    background: #07051a;
+    color: white;
+}
