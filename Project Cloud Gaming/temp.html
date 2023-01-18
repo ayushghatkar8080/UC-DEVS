@@ -9,7 +9,8 @@
 
     <!-- style {start} -->
     <link rel="stylesheet" href="style.css">
-    <link href="../cursor.css" rel="styleshhet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../cursor.css" rel="stylesheet">
     <!-- style{end} -->
 
     <!--script{start}-->
@@ -17,7 +18,6 @@
     <!-- <script src="ScrollSystem.js"></script> -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <!--script{end}-->
-
 </head>
 <div id="g_id_onload"
 data-client_id="924502795007-d7fuplen5eggln0b7biu08kt8f00k7g4.apps.googleusercontent.com" 
@@ -36,10 +36,12 @@ data-skip_prompt_cookie="sid" >
             <div class="p-2 float-start">
                 <a class="navbar-brand" href="http://localhost/Project%20Cloud%20Gaming/"><h2 class="h2 text-white">Uc Devs</h2></a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="d-flex p-2 justify-content-around collapse" id="navbarTogglerDemo01">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="d-flex p-2 nav_styling justify-content-around collapse" id="navbarTogglerDemo01">
                 <a class="nav-link p-2 padding  text-link text-white " aria-current="page" href="index.html">Features</a>
                 <a class="nav-link p-2 text-white " href="jm.html">Solutions</a>
                 <a class="nav-link p-2 text-white " href="contact.html">Resources</a>
@@ -52,10 +54,73 @@ data-skip_prompt_cookie="sid" >
     <div class="page1 res">
         <div id="header" class="header">
             <h1 class="header-text">Explore the Cloud Gaming<br></h1>
-            <button onclick="document.getElementById('page2').scrollIntoView();" class="btn syj bg-white">Start your Journey</button>
         </div>
     </div>
-    <div class="page2 res" id="page2">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="BF2042.jpg" class="d-block w-100" alt="BF2042">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>BattleField 2042</h2>
+                  <p>Battlefield 2042 is a first-person shooter, developed by DICE and published by Electronic Arts. It is the twelfth main installment in the Battlefield series</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="gtav.jpg" class="d-block w-100" alt="gtav">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>Grand Theft Auto</h2>
+                  <p>Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="gow.jpg" class="d-block w-100" alt="gow">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>God Of War</h2>
+                  <p>God of War is an action-adventure game franchise created by David Jaffe at Sony's Santa Monica Studio. It began in 2005 on the PlayStation 2 video game console and has become a flagship series for PlayStation</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="cyberP.jpg" class="d-block w-100" alt="CyberPunk2077">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>CyberPunk 2077<h2>
+                  <p>Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt Red and published by CD Projekt.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+    </div>
+    <div class="page2 res">
+      <div class="game-list">
+        <div class="new-and-trending"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <footer>
+        <div class="footer-content">
+            <h3>UC DEVS</h3>
+            <p>The Future Of Cloud Gaming</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 <span>Uc Devs</span></p>
+        </div>
+      </footer>  
     </div>
 
 

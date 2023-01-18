@@ -10,7 +10,11 @@
     <!-- style {start} -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="../cursor.css" rel="styleshhet">
+    <link href="../cursor.css" rel="stylesheet">
+    <link href="playbutton.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/850107445d.js" crossorigin="anonymous"></script>
     <!-- style{end} -->
 
     <!--script{start}-->
@@ -32,68 +36,109 @@ style="position: fixed; top: 74px; right: 400px;
 data-cancel_on_tap_outside="false" 
 data-skip_prompt_cookie="sid" >
 </div>
-        <div class="navbar fixed-top navbar-scroll d-flex flex-row ">
-            <div class="p-2 float-start">
-                <a class="navbar-brand" href="http://localhost/Project%20Cloud%20Gaming/"><h2 class="h2 text-white">Uc Devs</h2></a>
+<div id="progressbar"></div>
+<div id="scrollpath"></div>
+        <div class="navbar fixed-top navbar-scroll d-flex flex-row">
+            <div class="px-2 float-start align-items-center" style="padding-top: 5px;">
+                <a class="navbar-brand align-items-center" href="#"><h2 class="h2 text-white">Uc Devs</h2></a>
             </div>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+            <div class="d-flex  nav_styling justify-content-center align-items-start">
+                <a style="padding-bottom: 30px;" class="nav-link fs-5 px-2 text-link text-white" aria-current="page" href="index.html">Features</a>
+                <a style="padding-bottom: 30px;" class="nav-link fs-5 px-2 text-white" href="jm.html">Solutions</a>
+                <a style="padding-bottom: 30px;" class="nav-link fs-5 px-2 text-white" href="contact.html">Resources</a>
+                <a style="padding-bottom: 30px;" class="nav-link fs-5 px-2 text-white" href="about.html">Pricing</a>
             </div>
-            <div class="d-flex p-2 nav_styling justify-content-around collapse" id="navbarTogglerDemo01">
-                <a class="nav-link p-2 padding  text-link text-white " aria-current="page" href="index.html">Features</a>
-                <a class="nav-link p-2 text-white " href="jm.html">Solutions</a>
-                <a class="nav-link p-2 text-white " href="contact.html">Resources</a>
-                <a class="nav-link p-2 text-white " href="about.html">Pricing</a>
-            </div>
-            <div class="p-2 float-end">
-                <button class="btn bg-white">Login / Join</button>
+            <div class=" float-end">
+              <button class="search-btn"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+              <button class="profile-btn"><i class="fa-solid fa-user"></i></button>
             </div>
           </div>
     <div class="page1 res">
         <div id="header" class="header">
+          <video autoplay loop muted play-inline class="back-video">
+            <source src="live.m4v" type="video/mp4">
+          </video>
             <h1 class="header-text">Explore the Cloud Gaming<br></h1>
-            <button onclick="document.getElementById('page2').scrollIntoView();" class="btn syj bg-white">Start your Journey</button>
-        </div>
-    </div>
-    <div class="page2 res" id="page2">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="BF2042.jpg" class="d-block w-100" alt="BF2042">
-              </div>
-              <div class="carousel-item">
-                <img src="gtav.jpg" class="d-block w-100" alt="gtav">
-              </div>
-              <div class="carousel-item">
-                <img src="gow.jpg" class="d-block w-100" alt="gow">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <a href="#page2">Explore</a>
           </div>
     </div>
-    <div class="">
-      <footer>
-        <div class="footer-content">
-            <h3>code opacity</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo iste corrupti doloribus odio sed!</p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="cursor:none;"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2" style="cursor:none;"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3" style="cursor:none;"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3" aria-label="Slide 4" style="cursor:none;"></button>
+      </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="BF2042.jpg" class="d-block w-100" alt="BF2042">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>BattleField 2042</h2>
+              <p>Battlefield 2042 is a first-person shooter, developed by DICE and published by Electronic Arts. It is the twelfth main installment in the Battlefield series</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="gtav.jpg" class="d-block w-100" alt="gtav">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Grand Theft Auto</h2>
+              <p>Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="gow.jpg" class="d-block w-100" alt="gow">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>God Of War</h2>
+              <p>God of War is an action-adventure game franchise created by David Jaffe at Sony's Santa Monica Studio. It began in 2005 on the PlayStation 2 video game console and has become a flagship series for PlayStation</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="cyberP.jpg" class="d-block w-100" alt="CyberPunk2077">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="caption">
+              <h2>CyberPunk 2077</h2>
+              <p>Cyberpunk 2077 is a 2020 action role-playing video game developed by CD Projekt Red and published by CD Projekt.</p>
+              </div>
+              <div class="cyberbtn"><button>PLAY</button>
+            </div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>copyright &copy;2023 <span>Uc Devs</span></p>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev" style="cursor:none;">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style="cursor:none;">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button></div>
+    </div>
+    <div class="page2 res" id="page2">
+      <div class="game-list">
+        <div class="nat gl-sizing">
+          <h3>New & Trending</h3><br>
+          <div class="row row-cols-1 row-cols-md-6 g-4">
+            <div class="col">
+                <img src="https://cdn.bifrost.com/pro/images/e633ad627f79b1479652a438f516cf2e.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="col">
+                <img src="https://cdn.bifrost.com/pro/images/8b45567fb07c79eb40b1979f287768b9.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="col">
+                <img src="https://cdn.bifrost.com/pro/images/36dd901f9faf9aa5168d0dc926336cb4.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="col">
+                <img src="https://cdn.bifrost.com/pro/web/2022/November/25/b3ad18c6cf6bb7c21ce3c4717568aba5.jpg">
+            </div>
+            <div class="col">
+                <img src="https://cdn.bifrost.com/pro/web/2022/June/7/601c77f9fc54b8b073afaa6e63670b50.jpg">
+            </div>
+            <div class="col">
+                <img src="https://cdn.bifrost.com/pro/web/2022/September/16/dc051947e7310a973bbc579c806396ef.webp">
+            </div>
+          </div>
         </div>
-      </footer>  
+        <div class="popu gl-sizing"></div>
+        <div class="fps gl-sizing"></div>
+      </div>
     </div>
 
 
@@ -112,13 +157,16 @@ data-skip_prompt_cookie="sid" >
     window.addEventListener('scroll', function(){
         bg.style.backgroundSize = 100 + +window.pageYOffset/12+'%';
         bg.style.opacity = 1.1 - +window.pageYOffset/1000+'';
-        bg_text.style.backgroundSize = 100 + +window.pageYOffset/12+'%';
+        bg_text.style.fontSize = 100 + +window.pageYOffset/12+'%';
     })
-    hamburger = document.querySelector(".hamburger")
-    hamburger.onclick = function(){
-        navBar = document.querySelector(".nav_styling")
-        navBar.classList.toggle("active")
-    }
+</script>
+<script>
+  let progress = document.getElementById('progressbar');
+	let totalHeight = document.body.scrollHeight - window.innerHeight;
+	window.onscroll = function () {
+		let progressHeight = (window.pageYOffset / totalHeight) * 100;
+		progress.style.height = progressHeight + "%";
+	}
 </script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
